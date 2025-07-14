@@ -1,0 +1,19 @@
+{
+  "name": "com.mizorerainy.pandora.build-utility",
+  "version": "1.0.0",
+  "displayName": "Pandora Build Utility",
+  "description": "A comprehensive Unity build utility for streamlined build management. Configure once, then build with a single click - no need to manually select folders, set naming conventions, or manage build revisions.",
+  "unity": "2022.3",
+  "author": {
+    "name": "MizoreRainy",
+    "url": "https://github.com/mizorerainy"
+  },
+  "keywords": [
+    "build",
+    "utility",
+    "editor",
+    "automation",
+    "pipeline"
+  ],
+  "category": "Editor Extensions"
+}
