@@ -1850,7 +1850,8 @@ namespace MizoreRainy.Pandora.BuildUtility
 			// Ensure the final output directory exists
 			Directory.CreateDirectory(outputDirectory);
 
-			var versionString = _BuildSettingsData.CurrentVersion.Replace('.', '-');
+
+			var versionString = _BuildSettingsData.GetCurrentVersion().Replace('.', '-');
 			var timestamp = DateTime.Now.ToString("yyMMdd");
 			var baseArtifactName = $"{codeName.ToLower()}-{_profile.BuildSuffix}-v{versionString}-{timestamp}";
 			var revisionNumber = 1;

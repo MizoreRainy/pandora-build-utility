@@ -129,6 +129,9 @@ namespace MizoreRainy.Pandora.BuildUtility
 		/// </summary>
 		private void OnEnable()
 		{
+			// Initialize defaults first
+			InitializeDefaults();
+
 			foreach (var profile in
 			         BuildProfiles.Where(_p => !_p.DevelopmentBuildEnabled && _p.DefaultDevelopmentBuild))
 				profile.InitializeCheckboxState();
@@ -189,6 +192,19 @@ namespace MizoreRainy.Pandora.BuildUtility
 			return CodeNameConfigs.FirstOrDefault(_c =>
 				_c.CodeName.Equals(_codeName, StringComparison.OrdinalIgnoreCase));
 		}
+
+		/// <summary>
+		/// Gets the current version, falling back to PlayerSettings.bundleVersion if CurrentVersion is null or empty.
+		/// </summary>
+		public string GetCurrentVersion()
+		{
+			return !string.IsNullOrEmpty(CurrentVersion)
+				? CurrentVersion
+				: (!string.IsNullOrEmpty(PlayerSettings.bundleVersion)
+					? PlayerSettings.bundleVersion
+					: "0.0.1");
+		}
+
 
 		/// <summary>
 		///     Initializes the settings with default values if they are not already set.
