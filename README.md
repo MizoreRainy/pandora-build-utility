@@ -11,7 +11,7 @@ For full documentation, please see the [Documentation](Documentation~/index.md) 
 1. Open Unity Package Manager (`Window` → `Package Manager`)
 2. Click the `+` button in the top-left corner
 3. Select `Add package from git URL...`
-4. Enter the package URL: `https://github.com/yourusername/pandora-build-utility.git`
+4. Enter the package URL: `https://github.com/MizoreRainy/pandora-build-utility.git`
 5. Click `Add`
 
 ### Manual Installation
